@@ -126,16 +126,20 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.19.1</version>
 					<configuration>
+						<includes>
+							<include>**/</include>
+						</includes>
 						<parallel>methods</parallel>
 						<threadCount>4</threadCount>
-						<!-- <useUnlimitedThreads>true</useUnlimitedThreads> -->
+						<perCoreThreadCount>true</perCoreThreadCount>
+						<!-- <useUnlimitedThreads>true</useUnlimitedThreads>
 						<properties>
 							<configurationParameters>
 								junit.jupiter.conditions.deactivate = *
 								junit.jupiter.extensions.autodetection.enabled = true
 								junit.jupiter.testinstance.lifecycle.default = per_class
 							</configurationParameters>
-						</properties>
+						</properties> -->
 					</configuration>
 				</plugin>
 				<plugin>
